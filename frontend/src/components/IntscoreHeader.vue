@@ -10,7 +10,9 @@ export default {
 </script>
 
 <template>
-  <h1>hello world</h1>
+  <header>
+    <h1>IntScore Ledger</h1>
+  </header>
 </template>
 
 <style lang="scss" scoped>
@@ -20,9 +22,14 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
+header {
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+}
 h1 {
-  color: $BlazeOrange;
+  color: $MineShaft;
 }
 </style>
