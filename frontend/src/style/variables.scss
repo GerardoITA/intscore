@@ -1,0 +1,67 @@
+/* Color cube */
+$BlazeOrange: #FE6600;
+$SugarCane: #FEFFFE;
+$ButterflyBush: #554E9E ;
+$MineShaft: #262626 ;
+$Cameo: #D7AC95;
+$Crimson: #D71937;
+$Sushi: #84B443;
+$Limeade: #37AD02;
+$SchoolbusYellow: #FCD900;
+$CuriousBlade: #1AAFE4;
+
+/* Median cut */
+$BonJour: #E8E6E7;
+$EastBay: #444275 ;
+$Mojo: #C34938 ;
+$Twine: #C29458;
+$VidaLoca: #48BE27;
+
+/* Material design */
+$Victoria: #4C4A9B;
+$Eunry: #CD9F90;
+$Lima: #46BD23;
+$Tautara: #242423;
+$Cashmere: #E2BEA6;
+
+/* Custom */
+$MyGrey: rgb(160, 160, 160);
+$LightGrey: rgb(200, 200, 200);
+$LighterGrey: rgb(240, 240, 240);
+
+
+/* To be moved in general */
+.pulsante {
+    padding: 1rem 1.2rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.bg_arancione {
+    background-color: $BlazeOrange;
+    color: $SugarCane;
+
+    &:hover {
+            background-color: $ButterflyBush;
+            cursor: pointer;
+        }
+}
+.bg_viola {
+    background-color: $ButterflyBush;
+    color: $SugarCane;
+    border: 2px solid $SugarCane;
+    &:hover {
+            background-color: $SugarCane;
+            color: $ButterflyBush;
+            cursor: pointer;
+        }
+}
+
+.solo_bg_arancione {
+    background-color: $BlazeOrange;
+}
+.solo_bg_viola {
+    background-color: $ButterflyBush;
+}
