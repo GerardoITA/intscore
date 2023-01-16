@@ -1,7 +1,12 @@
 <script>
 import { store } from '../../store';
 export default {
-  name: "",
+  name: "MainCard",
+  props: {
+    paese: String,
+    punteggio: Number,
+
+  },
   data() {
     return {
       store,
@@ -13,10 +18,10 @@ export default {
 <template>
   <div class="nazione">
     <div class="nazione_tag">
-      aaa
+      {{ paese }}
     </div>
     <div class="nazione_score">
-      22.000
+      {{ punteggio }}
     </div>
   </div>
   
@@ -31,27 +36,23 @@ export default {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-.contenitore {
+
+.nazione {
   display: flex;
-  justify-content: flex-start;
-  padding: 20px;
-  gap: 5px;
-  flex-direction: column;
-  .nazione {
+
+  border: 3px solid $MineShaft;
+  border-radius: 8px;
+
+  .nazione_tag {
+    padding: 5px;
+    width: 80%;
+    border-right: 3px solid $MineShaft;
+  }
+
+  .nazione_score {
+    padding: 5px;
     display: flex;
-    
-    border: 3px solid $MineShaft;
-    border-radius: 8px;
-    .nazione_tag {
-      padding: 5px;
-      width: 80%;
-      border-right: 3px solid $MineShaft;
-    }
-    .nazione_score {
-      padding: 5px;
-      display: flex;
-     
-    }
+
   }
 }
 </style>

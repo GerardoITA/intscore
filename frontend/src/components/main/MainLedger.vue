@@ -1,7 +1,12 @@
 <script>
+import MainCard from './MainCard.vue';
 import { store } from '../../store';
+
 export default {
-  name: "",
+  name: "MainLedger",
+  components: {
+    MainCard
+  },
   data() {
     return {
       store,
@@ -12,14 +17,12 @@ export default {
 
 <template>
   <div class="contenitore">
-    <!-- <div class="nazione" v-for="(country, index) in store.Source" :key="index">
-      <div class="nazione_tag">
-        aaa
-      </div>
-      <div class="nazione_score">
-        22.000
-      </div>
-    </div> -->
+    <div v-for="(card, index) in store.Source" :key="index">
+      <MainCard
+        :paese="card.tag"
+        :punteggio="card.score"
+      ></MainCard>
+    </div>
   </div>
 </template>
 
@@ -38,21 +41,6 @@ export default {
   padding: 20px;
   gap: 5px;
   flex-direction: column;
-  .nazione {
-    display: flex;
-    
-    border: 3px solid $MineShaft;
-    border-radius: 8px;
-    .nazione_tag {
-      padding: 5px;
-      width: 80%;
-      border-right: 3px solid $MineShaft;
-    }
-    .nazione_score {
-      padding: 5px;
-      display: flex;
-     
-    }
-  }
+  
 }
 </style>

@@ -1,7 +1,7 @@
 <script>
-import MainLedger from './main/MainLedger.vue';
+import MainLedger from './main/MainLedger.vue'; 
 export default {
-  name: "",
+  name: "IntscoreMain",
   components: {
     MainLedger
   },
@@ -16,7 +16,7 @@ export default {
 <template>
   <main>
     <MainLedger class="side left">
-      
+  
     </MainLedger>
     <div class="side left">
     
