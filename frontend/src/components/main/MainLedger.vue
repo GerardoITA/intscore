@@ -1,6 +1,7 @@
 <script>
 import MainCard from './MainCard.vue';
 import { store } from '../../store';
+import axios from 'axios';
 
 export default {
   name: "MainLedger",
@@ -11,13 +12,27 @@ export default {
     return {
       store,
     }
+  },
+  methods: {
+      getJson() {
+        let countryapi = store.source;
+        axios
+          .get(countryapi)
+          .then(res => {
+            store.countries = res.data;
+            console.log(store.countries);
+          });
+      },
+  },
+  mounted(){
+    this.getJson();
   }
 }
 </script>
 
 <template>
   <div class="contenitore">
-    <div v-for="(card, index) in store.Source" :key="index">
+    <div v-for="(card, index) in store.countries" :key="index">
       <MainCard
         :paese="card.tag"
         :punteggio="card.score"

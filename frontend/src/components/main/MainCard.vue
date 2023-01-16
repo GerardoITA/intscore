@@ -4,7 +4,7 @@ export default {
   name: "MainCard",
   props: {
     paese: String,
-    punteggio: Number,
+    punteggio: String,
 
   },
   data() {
