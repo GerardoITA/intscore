@@ -11,16 +11,15 @@ export default {
 </script>
 
 <template>
-  <div class="contenitore">
-    <!-- <div class="nazione" v-for="(country, index) in store.Source" :key="index">
-      <div class="nazione_tag">
-        aaa
-      </div>
-      <div class="nazione_score">
-        22.000
-      </div>
-    </div> -->
+  <div class="nazione">
+    <div class="nazione_tag">
+      aaa
+    </div>
+    <div class="nazione_score">
+      22.000
+    </div>
   </div>
+  
 </template>
 
 <style lang="scss" scoped>
