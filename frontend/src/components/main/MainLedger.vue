@@ -21,19 +21,27 @@ export default {
           .get(countryapi)
           .then(res => {
             store.countries = res.data;
-            console.log(store.countries);
           });
       },
   },
   mounted(){
     this.getJson();
+  },
+  computed: {
+    sortedItems() {
+      if (store.countries[store.selectedJson]) {
+        return store.countries[store.selectedJson].sort((a, b) => {
+          return parseInt(b.score) - parseInt(a.score);
+        });
+      };
+    }
   }
 }
 </script>
 
 <template>
   <div class="contenitore">
-    <div v-for="(card, index) in store.countries[store.selectedJson]" :key="index">
+    <div v-for="(card, index) in sortedItems" :key="index">
       <MainCard
         :paese="card.tag"
         :punteggio="card.score"

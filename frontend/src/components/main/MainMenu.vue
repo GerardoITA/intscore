@@ -22,7 +22,6 @@ export default {
       if (store.selectedJson !== ".json") {
         store.pickedSave = true;
       }
-      console.log(store.pickedSave)
     }
   },
   mounted() {
@@ -39,9 +38,6 @@ export default {
         {{ file }}
       </option>
     </select>
-<!--     <button @click="test()">
-
-    </button> -->
   </div>
   
 </template>
