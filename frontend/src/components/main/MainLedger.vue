@@ -11,6 +11,7 @@ export default {
   data() {
     return {
       store,
+      
     }
   },
   methods: {
@@ -32,11 +33,14 @@ export default {
 
 <template>
   <div class="contenitore">
-    <div v-for="(card, index) in store.countries" :key="index">
+    <div v-for="(card, index) in store.countries[store.selectedJson]" :key="index">
       <MainCard
         :paese="card.tag"
         :punteggio="card.score"
       ></MainCard>
+    </div>
+    <div :class='store.pickedSave ? "hidden" : ""'>
+     Please select a save.
     </div>
   </div>
 </template>
@@ -57,5 +61,8 @@ export default {
   gap: 5px;
   flex-direction: column;
   
+}
+.hidden {
+  display: none;
 }
 </style>
