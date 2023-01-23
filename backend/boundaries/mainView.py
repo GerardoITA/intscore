@@ -12,7 +12,7 @@ class mainView(QWidget):
 
         self.loginUI()
         self.show()
-        self.buttons[0].clicked.connect(self.getFileName)
+        self.buttons[0].clicked.connect(self.getEu4File)
 
 
     def loginUI(self):
@@ -36,15 +36,16 @@ class mainView(QWidget):
         self.convertButton.move(int((self.width/2)-self.convertButton.width()/2), 110)
 
 
-    def getFileName(self):
+    def getEu4File(self):
         file_filter = 'Data File (*.eu4)'
-        QFileDialog.getOpenFileName(
+        response = QFileDialog.getOpenFileName(
             parent=self,
             caption='Select a data file',
             directory=os.getcwd(),
             filter=file_filter,
             initialFilter='Data File (*.eu4)'
         )
+        self.insertFile[0].setText(response[0])
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
