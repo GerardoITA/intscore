@@ -25,5 +25,8 @@ if __name__ == '__main__':
         coun.append(c.country(c_list[i], countries_data[c_list[i]]))
 
     for i in range(len(c_list)):
-        if coun[i].check_intScore() != None:
-            print(f'Nazione: {coun[i].tag}, IntScore: {coun[i].check_intScore()}')
+        #if coun[i].check_intScore() != None:
+            #print(f'Nazione: {coun[i].tag}, IntScore: {coun[i].check_intScore()}')
+        print(f'')
+
+## 1 - Define di tutti gli elementi di un save come oggetto
