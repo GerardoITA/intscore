@@ -1,10 +1,39 @@
 <script>
+import MainCard from './MainCard.vue';
 import { store } from '../../store';
+import axios from 'axios';
+
 export default {
-  name: "",
+  name: "MainLedger",
+  components: {
+    MainCard
+  },
   data() {
     return {
       store,
+      
+    }
+  },
+  methods: {
+      getJson() {
+        let countryapi = store.source;
+        axios
+          .get(countryapi)
+          .then(res => {
+            store.countries = res.data;
+          });
+      },
+  },
+  mounted(){
+    this.getJson();
+  },
+  computed: {
+    sortedItems() {
+      if (store.countries[store.selectedJson]) {
+        return store.countries[store.selectedJson].sort((a, b) => {
+          return parseInt(b.score) - parseInt(a.score);
+        });
+      };
     }
   }
 }
@@ -12,14 +41,15 @@ export default {
 
 <template>
   <div class="contenitore">
-    <!-- <div class="nazione" v-for="(country, index) in store.Source" :key="index">
-      <div class="nazione_tag">
-        aaa
-      </div>
-      <div class="nazione_score">
-        22.000
-      </div>
-    </div> -->
+    <div v-for="(card, index) in sortedItems" :key="index">
+      <MainCard
+        :paese="card.tag"
+        :punteggio="card.score"
+      ></MainCard>
+    </div>
+    <div :class='store.pickedSave ? "hidden" : ""'>
+     Please select a save.
+    </div>
   </div>
 </template>
 
@@ -38,21 +68,9 @@ export default {
   padding: 20px;
   gap: 5px;
   flex-direction: column;
-  .nazione {
-    display: flex;
-    
-    border: 3px solid $MineShaft;
-    border-radius: 8px;
-    .nazione_tag {
-      padding: 5px;
-      width: 80%;
-      border-right: 3px solid $MineShaft;
-    }
-    .nazione_score {
-      padding: 5px;
-      display: flex;
-     
-    }
-  }
+  
+}
+.hidden {
+  display: none;
 }
 </style>

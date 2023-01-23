@@ -2,7 +2,15 @@ import { reactive } from 'vue';
 
 export const store = reactive({
 
-        Source: "../../backend/json/example.json"
-
+        source: "http://localhost/api.php",
+        countries: [],
+        jsonFolder: "http://localhost/pathJson.php",
+        jsonList: [],
+        selectedJson: "" + ".json",
+        pickedSave: false,
         
+
+
 }); 
+
+

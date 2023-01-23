@@ -1,9 +1,11 @@
 <script>
-import MainLedger from './main/MainLedger.vue';
+import MainLedger from './main/MainLedger.vue'; 
+import MainMenu from './main/MainMenu.vue';
 export default {
-  name: "",
+  name: "IntscoreMain",
   components: {
-    MainLedger
+    MainLedger,
+    MainMenu,
   },
   data() {
     return {
@@ -16,10 +18,11 @@ export default {
 <template>
   <main>
     <MainLedger class="side left">
-      
+  
     </MainLedger>
     <div class="side left">
-    
+      <MainMenu>
+      </MainMenu>
     </div>
   </main>
 </template>
