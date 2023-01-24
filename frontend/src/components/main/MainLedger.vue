@@ -31,7 +31,7 @@ export default {
     sortedItems() {
       if (store.countries[store.selectedJson]) {
         return store.countries[store.selectedJson].sort((a, b) => {
-          return parseInt(b.score) - parseInt(a.score);
+          return b.score - a.score;
         });
       };
     }
@@ -68,6 +68,7 @@ export default {
   padding: 20px;
   gap: 5px;
   flex-direction: column;
+  overflow-y: scroll;
   
 }
 .hidden {
