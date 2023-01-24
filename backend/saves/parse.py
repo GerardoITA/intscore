@@ -68,6 +68,7 @@ def main():
                 with open(out_fn, 'w', encoding='utf-8') as outf:
                     print("Writing results to file...")
                     outf.write(json.dumps(res_dict, indent=2, ensure_ascii=False))
+
     except BadZipFile:  # Uncompressed file
         with open(in_fn, 'r', encoding='iso-8859-1') as fid:
             print("Found raw data.")

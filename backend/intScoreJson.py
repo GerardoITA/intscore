@@ -24,8 +24,12 @@ if __name__ == '__main__':
     for i in range(len(c_list)):
         coun.append(c.country(c_list[i], countries_data[c_list[i]]))
 
-    for i in range(len(c_list)):
-        if coun[i].check_intScore() != None and coun[i].check_intScore() > 0:
-            print(f'Nazione: {coun[i].tag}, IntScore: {coun[i].check_intScore()}')
-
-## 1 - Define di tutti gli elementi di un save come oggetto
+    nationList= []
+    with open('intScore.json', 'w') as f:
+        for i in range(len(c_list)):
+            if coun[i].check_intScore() != None and coun[i].check_intScore() > 0:
+                dictionary = {"tag" : coun[i].tag,
+                              "score": coun[i].check_intScore()
+                              }
+                nationList.append(dictionary)
+        json.dump(nationList, f, indent=1)
