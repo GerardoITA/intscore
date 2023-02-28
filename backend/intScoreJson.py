@@ -3,7 +3,7 @@ import json
 from entities import country as c
 
 #File di interesse
-file= 'mp_Milan1484_01_01.json'
+file= 'mp_Siam1551_01_01.json'
 
 def move_to_saves(dir):
     os.chdir(f'{os.getcwd()}/{dir}')
