@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from backend.controllers.converter import converter as c
+from backend.controllers.fileConverter import fileConverter as c
 from PyQt5.QtWidgets import QApplication, QLineEdit, QPushButton, QWidget, QFileDialog, QLabel
 import sys
 

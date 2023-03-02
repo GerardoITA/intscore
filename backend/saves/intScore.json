@@ -1,23 +1,23 @@
 [
  {
   "tag": "SWE",
-  "score": 446.0
+  "score": 514.0
  },
  {
   "tag": "TUR",
-  "score": 1027.0
+  "score": 2289.0
  },
  {
   "tag": "GBR",
-  "score": 466.0
+  "score": 858.0
  },
  {
   "tag": "PLC",
-  "score": 574.0
+  "score": 1232.0
  },
  {
   "tag": "FRA",
-  "score": 447.0
+  "score": 897.0
  },
  {
   "tag": "BRA",
@@ -25,7 +25,7 @@
  },
  {
   "tag": "HAB",
-  "score": 673.0
+  "score": 1153.0
  },
  {
   "tag": "SWI",
@@ -33,19 +33,19 @@
  },
  {
   "tag": "WES",
-  "score": 465.0
+  "score": 989.0
  },
  {
   "tag": "POR",
-  "score": 269.0
+  "score": 309.0
  },
  {
   "tag": "SPA",
-  "score": 557.0
+  "score": 721.0
  },
  {
-  "tag": "MLO",
-  "score": 423.0
+  "tag": "ITA",
+  "score": 807.0
  },
  {
   "tag": "NAP",
@@ -53,15 +53,15 @@
  },
  {
   "tag": "NED",
-  "score": 335.0
+  "score": 535.0
  },
  {
   "tag": "RUS",
-  "score": 551.0
+  "score": 935.0
  },
  {
   "tag": "ARB",
-  "score": 353.0
+  "score": 387.0
  },
  {
   "tag": "MAM",
@@ -69,7 +69,7 @@
  },
  {
   "tag": "MOR",
-  "score": 173.0
+  "score": 205.0
  },
  {
   "tag": "AFG",
@@ -81,11 +81,11 @@
  },
  {
   "tag": "SON",
-  "score": 548.0
+  "score": 1028.0
  },
  {
   "tag": "AKS",
-  "score": 605.0
+  "score": 1181.0
  },
  {
   "tag": "RZI",
@@ -93,7 +93,7 @@
  },
  {
   "tag": "JAP",
-  "score": 404.0
+  "score": 788.0
  },
  {
   "tag": "CSH",
@@ -101,11 +101,11 @@
  },
  {
   "tag": "YUA",
-  "score": 673.0
+  "score": 1505.0
  },
  {
   "tag": "YUE",
-  "score": 90.0
+  "score": 110.0
  },
  {
   "tag": "WUU",
@@ -113,22 +113,22 @@
  },
  {
   "tag": "YAN",
-  "score": 546.0
+  "score": 818.0
  },
  {
   "tag": "BNG",
-  "score": 274.0
- },
- {
-  "tag": "VIJ",
-  "score": 525.0
+  "score": 340.0
  },
  {
   "tag": "MER",
   "score": 304.0
  },
  {
+  "tag": "HIN",
+  "score": 1083.0
+ },
+ {
   "tag": "SIA",
-  "score": 410.0
+  "score": 746.0
  }
 ]
