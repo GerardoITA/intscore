@@ -10,6 +10,9 @@ from backend.controllers.fileIndexer import fileIndexer
 
 
 class fileConverter(fileIndexer):
+    def __init__(self, in_fn, out_fld):
+        fileIndexer.__init__(self,in_fn=in_fn, out_fld=out_fld)
+        self.outFile(file_type=".json")
 
 
     # The function parser is a modified version of the setup.py of this project
@@ -95,7 +98,9 @@ class fileConverter(fileIndexer):
         except Exception as ex:
             raise ex
 
+
 if __name__ == '__main__':
     out_fld = 'C:/Users/Diego/Downloads'
     in_fn = 'C:/Users/Diego/Downloads/mp_Ottoman_Empire1599_01_01.eu4'
     c= fileConverter(in_fn, out_fld)
+    print(c.__dict__)

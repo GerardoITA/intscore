@@ -32,4 +32,5 @@ if __name__ == '__main__':
                               "score": coun[i].check_intScore()
                               }
                 nationList.append(dictionary)
+        print(nationList)
         json.dump(nationList, f, indent=1)
